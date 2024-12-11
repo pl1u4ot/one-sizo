@@ -1,0 +1,87 @@
+.slider-frame{
+	overflow: hidden;
+	height: 800px;
+	width: 1000px;
+	margin-left: 210px;
+	margin-top:100px ;
+}
+
+
+
+@keyframes slide_animation{
+	0% {left:0px;}
+	10% {left:0px;}
+	20% {left:1200px;}
+	30% {left:1200px;}
+	40% {left: 2400px;}
+	50% {left: 2400px;}
+	60% {left: 1200px;}
+	70% {left: 1200px;}
+	80% {left: 0px;}
+	90% {left: 0px;}
+	100% {left:0px;}
+}
+
+@-webkit-keyframes slide_animation{
+	0% {left:0px;}
+	10% {left:0px;}
+	20% {left:1200px;}
+	30% {left:1200px;}
+	40% {left: 2400px;}
+	50% {left: 2400px;}
+	60% {left: 1200px;}
+	70% {left: 1200px;}
+	80% {left: 0px;}
+	90% {left: 0px;}
+	100% {left:0px;}
+}
+
+.slide-images{
+	width: 3600px;
+	height: 800px;
+	margin: 0 0 0 -2400px;
+	position: relative;
+	-webkit-animation-name: slide_animation;
+	animation-name: slide_animation;
+	-webkit-animation-duration: 33s;
+	animation-duration: 33s;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+	animation-direction: alternate;
+	-webkit-animation-play-state: running;
+	animation-play-state: running;
+}
+
+.img-container{
+	height: 800px;
+	width: 1200px;
+	position: relative;
+	float: left;
+	img{
+		width: 1000px;
+        height: 700px;
+	}
+}
+.text-container{
+	display: flex;
+	gap: 30px;
+	flex-direction: column;
+	margin-top: -130px;
+	margin-left: 30px;
+	h1{
+		color: aliceblue;
+		font-size: 50px;
+	}
+	i{
+		color: rgb(255, 255, 255);
+        font-size: 30px;
+		margin-top: 40px;
+	}
+	b{
+		color: rgb(255, 255, 255);
+        font-size: 30px;
+		margin-top: 40px;
+		gap: 5px;
+	}
+}
