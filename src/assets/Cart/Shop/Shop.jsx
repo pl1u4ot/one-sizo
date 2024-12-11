@@ -41,7 +41,7 @@ export default function Shop() {
     <>
       <section className='cart-section'>
         <div className="cart-container">
-          <h1>Корзина</h1>
+          <h1>Корзинa</h1>
         </div>
       </section>
 
