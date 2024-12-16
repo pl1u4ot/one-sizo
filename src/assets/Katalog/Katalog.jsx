@@ -7,7 +7,7 @@ export default function Katalog() {
     <>
       <Header/>
       <ProductList/>
-      <Footer/>
+      {/* <Footer/> */}
     </>
   )
 }

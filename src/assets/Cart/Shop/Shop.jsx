@@ -43,9 +43,9 @@ export default function Shop() {
         <div className="cart-container">
           <div className="cart-head">
             <h1>Корзинa</h1>
+            
+            {/* <h1>Состав</h1> */}
           </div>
-
-
         </div>
       </section>
 

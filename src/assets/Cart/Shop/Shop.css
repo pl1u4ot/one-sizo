@@ -1,11 +1,26 @@
-.cart-section{
+.cart-section {
     display: flex;
     width: 100%;
     height: 100vh;
     justify-content: center;
     align-items: center;
 }
-.cart-container{
+
+.cart-container {
     display: flex;
     flex-direction: column;
+
+    .cart-head {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        align-items: start;
+        justify-content: space-between;
+        width: 1200px;
+        h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+    }
+
 }
