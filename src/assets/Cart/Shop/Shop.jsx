@@ -36,12 +36,16 @@ export default function Shop() {
     sortProducts();
   }, [data]);
   console.log(sortData);
-  
+
   return (
     <>
       <section className='cart-section'>
         <div className="cart-container">
-          <h1>Корзинa</h1>
+          <div className="cart-head">
+            <h1>Корзинa</h1>
+          </div>
+
+
         </div>
       </section>
 
