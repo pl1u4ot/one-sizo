@@ -33,9 +33,9 @@ html, body {
 .img-product img {
     width: 300px;
     height: 150px;
+    border-radius: 10px 10px 0px 0px;
 }
 
-/* Карточка продукта */
 .product-card {
     width: 300px;
     height: 300px;
@@ -52,7 +52,6 @@ html, body {
     color: #ececec;
 }
 
-/* Кнопка в карточке */
 .product-card button {
     background-color: rgb(24, 63, 24);
     color: white;
