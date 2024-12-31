@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Search.css';
 
-function ProductCard({ product }) {
+function ProductCard({ product, addToCart }) {
   return (
     <div className="product-card">
       <img src={product.image} alt={product.name} className="product-image" />
@@ -9,6 +9,9 @@ function ProductCard({ product }) {
         <h3 className="product-name">{product.name}</h3>
         <p className="product-description">{product.description}</p>
         <p className="product-price">{product.price} ₽</p>
+        <button className="add-to-cart" onClick={() => addToCart(product)}>
+          Добавить в корзину
+        </button>
       </div>
     </div>
   );
@@ -18,6 +21,7 @@ export default function Search() {
   const [data, setData] = useState([]); // Все данные с сервера
   const [filteredData, setFilteredData] = useState([]); // Отфильтрованные данные
   const [searchQuery, setSearchQuery] = useState(''); // Строка поиска
+  const [cart, setCart] = useState([]); // Корзина товаров
 
   async function getData() {
     try {
@@ -42,6 +46,12 @@ export default function Search() {
     );
   }, [searchQuery, data]);
 
+  // Добавление товара в корзину
+  function addToCart(product) {
+    setCart(prevCart => [...prevCart, product]);
+    localStorage.setItem(product.id, product)
+  }
+
   return (
     <div className="search-container">
       <div className="group">
@@ -63,7 +73,7 @@ export default function Search() {
         {filteredData.length > 0 ? (
           <div className="product-grid">
             {filteredData.map((product) => (
-              <ProductCard key={product.id} product={product} />
+              <ProductCard key={product.id} product={product} addToCart={addToCart} />
             ))}
           </div>
         ) : (

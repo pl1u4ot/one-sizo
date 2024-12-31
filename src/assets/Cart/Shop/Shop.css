@@ -111,3 +111,17 @@
     color: #333;
     font-weight: bold;
 }
+.price{
+    display: flex;flex-direction: column;
+    gap: 20px;
+    width: 400px;
+    height: 80px;
+}
+.deleteButton{
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}

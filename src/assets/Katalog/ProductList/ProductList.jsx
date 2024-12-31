@@ -70,7 +70,6 @@ export default function ProductList() {
     fetchProducts(selectedCategory, 1);
   }, [selectedCategory]);
 
-  // Добавление или удаление продукта из "сохраненных"
   const toggleSaveProduct = (product) => {
     const newSavedProducts = new Set(savedProducts);
     if (newSavedProducts.has(product.id)) {
